@@ -191,11 +191,83 @@ This confirms the **EBS snapshot backup and restore** was successful.
 
 ---
 
+## 🌍 Copy EBS Snapshot to Another Region
+
+This section explains how to copy an EBS snapshot from one AWS region to another for disaster recovery.
+
+1. Go to **EC2 Dashboard → Snapshots**
+2. Select the required **EBS snapshot**
+3. Click **Actions → Copy snapshot**
+4. Choose:
+
+   * **Destination region** (as per your requirement)
+5. Click **Copy snapshot**
+
+✅ Snapshot will be copied to the selected region.
+
+---
+
+## 🔄 AWS Data Lifecycle Manager (Automated Snapshot Backup)
+
+AWS Data Lifecycle Manager helps automate EBS snapshot creation using tags.
+
+### Step 1: Add Tags to EBS Volume
+
+1. Go to **EC2 → Volumes**
+2. Select the volume
+3. Go to **Tags → Manage tags**
+4. Add:
+
+   * **Key:** `EVM`
+   * **Value:** `Test`
+5. Click **Save**
+
+---
+
+### Step 2: Create Lifecycle Policy
+
+1. Go to **EC2 → Lifecycle Manager**
+2. Click **Create lifecycle policy**
+3. Select **Custom policy**
+4. Click **Next**
+5. Enter:
+
+   * **Target resource:** EBS volume
+   * **Target tags:**
+
+     * Key: `EVM`
+     * Value: `Test`
+   * **Policy description:** `Policy for my test EVM EBS`
+6. Configure schedule and retention as required
+7. Click **Create policy**
+
+✅ Snapshots will now be created automatically.
+
+---
+
+## 🗑️ Snapshot Backup Using Recycle Bin (Retention Rule)
+
+AWS Recycle Bin protects snapshots from accidental deletion.
+
+1. Go to **EC2 → Snapshots**
+2. Open **Recycle Bin** from the left menu
+3. Click **Create retention rule**
+4. Configure:
+
+   * **Resource type:** Snapshot
+   * **Retention period:** As per requirement
+5. Review configuration
+6. Click **Create retention rule**
+
+✅ Deleted snapshots will be retained based on the retention rule.
+
+---
+
 ## 👨‍💻 Author
 
-  Kumlesh Kurre
+**Kumlesh Kurre**
 💼 IT Support & Network Engineer
 
-⭐ If you find this guide helpful, don’t forget to star ⭐ the GitHub repository
+⭐ If you find this guide helpful, don’t forget to star ⭐ the GitHub repository!
 
-Purpose: AWS Learning & Practice 🚀
+**Purpose:** AWS Learning & Practice 🚀
