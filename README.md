@@ -197,3 +197,5 @@ This confirms the **EBS snapshot backup and restore** was successful.
 💼 IT Support & Network Engineer
 
 ⭐ If you find this guide helpful, don’t forget to star ⭐ the GitHub repository
+
+Purpose: AWS Learning & Practice 🚀
