@@ -13,7 +13,7 @@ This guide explains **how to take an EBS snapshot (backup)** from an EC2 instanc
 
 ---
 
-## 🟢 Step 1: Create File & Folder on EC2 Instance
+## 🟢 Step 1: Create File & Folder on EC2 Instance.
 
 1. **Connect to your EC2 instance** (AWS Linux) using SSH.
 2. Run the following commands:
