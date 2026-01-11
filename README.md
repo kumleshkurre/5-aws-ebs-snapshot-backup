@@ -252,7 +252,7 @@ AWS Recycle Bin protects snapshots from accidental deletion.
 1. Go to **EC2 → Snapshots**
 2. Open **Recycle Bin** from the left menu
 3. Click **Create retention rule**
-4. Configure:
+4. Configure:-
 
    * **Resource type:** Snapshot
    * **Retention period:** As per requirement
