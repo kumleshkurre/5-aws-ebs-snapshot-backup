@@ -18,7 +18,7 @@ This guide explains **how to take an EBS snapshot (backup)** from an EC2 instanc
 1. **Connect to your EC2 instance** (AWS Linux) using SSH.
 2. Run the following commands:
 
-```bash
+```js
 ls
 pwd
 
